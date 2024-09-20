@@ -5,16 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biker Zone with Daisy UI</title>
+    <!-- tailwind css and daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <!-- custome classes -->
+     <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        bikePrimary: '#E76F51',
+                    }
+                }
+            }
+        }
+     </script>
+
+    <!-- custom fonts -->
+    <style>
+        .poppins {
+            font-family: "Poppins", system-ui;
+        }
+    </style>
+
 </head>
 
-<body>
-    <header>
+<body class="poppins">
+    <header class="md:container md:mx-auto">
         <nav>
-            <div class="navbar bg-base-100 container mx-auto">
-                <div class="navbar-start">
+            <div class="navbar bg-base-100">
+                <div class="flex-1">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -23,31 +51,30 @@
                                     d="M4 6h16M4 12h8m-8 6h16" />
                             </svg>
                         </div>
-                        <ul tabindex="0"
-                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <ul tabindex="0" class="text-base menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <li><a>Home</a></li>
                             <li><a>Shop</a></li>
                             <li><a>Blog</a></li>
                             <li><a>Contact</a></li>
                         </ul>
                     </div>
-                    <a class="btn btn-ghost text-xl">BikerZone</a>
+                    <a class="btn btn-ghost text-4xl">BikerZone</a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
-                    <ul class="menu menu-horizontal px-1">
+                    <ul class="menu menu-horizontal px-1 text-base">
                         <li><a>Home</a></li>
                         <li><a>Shop</a></li>
                         <li><a>Blog</a></li>
                         <li><a>Contact</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end">
-                    <a class="btn btn-error">Login</a>
+                <div class="">
+                    <a class="btn bg-bikePrimary text-white">Login</a>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
+    <main class="md:container md:mx-auto">
 
     </main>
     <footer>
@@ -56,6 +83,3 @@
 </body>
 
 </html>
-
-
-<!-- 7:20 sep -->
